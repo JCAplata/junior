@@ -1,0 +1,180 @@
+nav {
+    background-color: #d2ffe0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* centra verticalmente */
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li {
+    margin: 0 20px;
+}
+
+nav ul.menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px; /* espacio para el cuadro */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hover con cuadro */
+nav ul.menu li a:hover {
+    background-color: #000000;
+    color: white;
+    text-decoration: underline;
+}
+
+/* Logo */
+nav img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+/* Base para todos los íconos */
+.redes a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/* Colores iniciales */
+.redes a.whatsapp {
+    background-color: #25D366;
+}
+
+.redes a.instagram {
+    background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.redes a.tiktok {
+    background-color: #010101;
+}
+
+/* Efecto hover: giro + "relleno" */
+.redes a:hover {
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Extra: que parezca que “se rellena de nuevo” */
+.redes a.whatsapp:hover {
+    background: linear-gradient(135deg, #1ebe5d, #25D366);
+}
+
+.redes a.instagram:hover {
+    background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fdf497 15%, #fd5949 50%, #d6249f 70%, #285AEB 100%);
+}
+
+.redes a.tiktok:hover {
+    background: linear-gradient(135deg, #010101);
+}
+
+/* 🎯 Botones de navegación internos */
+button {
+    background: black;
+    border: none;
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* quitar el azul del enlace dentro del botón */
+button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* hover bonito */
+button:hover {
+    background: #444;
+}
+
+button:hover a {
+    color: black;
+}
+
+/* contenedor para centrar botones */
+body > button, body > button + button, body > button + button + button {
+    display: inline-block;
+    text-align: center;
+}
+body {
+    text-align: center; /* centra los botones */
+}
+
+/* 🎯 Contenedores de tarjetas en grupos */
+.tarjes1, .tarjes2 {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+/* 🎯 Tarjetas */
+.tarje1, .tarje2, .tarje3,
+.tarje4, .tarje5, .tarje6,
+.tarje7, .tarje8 {
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+    flex: 1 1 250px;
+}
+
+/* Hover */
+.tarje1:hover, .tarje2:hover, .tarje3:hover,
+.tarje4:hover, .tarje5:hover, .tarje6:hover,
+.tarje7:hover, .tarje8:hover {
+    transform: translateY(-10px);
+    background-color: #25D366;
+}
+
+/* Imágenes dentro de tarjetas */
+.tarje1 img, .tarje2 img, .tarje3 img,
+.tarje4 img, .tarje5 img, .tarje6 img,
+.tarje7 img, .tarje8 img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* 🎯 Tarjetas solas (centradas) */
+.tarjes3, .tarjes4 {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
