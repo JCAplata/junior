@@ -172,3 +172,83 @@ nav img {
     width: 100px;
     height: 100px;
 }
+/* Ocultar checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Estilo del ícono hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+  margin-left: auto;
+}
+
+/* Redes sociales flotantes solo en móviles */
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  /* Menú en móviles */
+  nav ul.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #d2ffe0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  nav ul.menu li {
+    margin: 15px 0;
+  }
+
+  /* Mostrar menú cuando se active el checkbox */
+  #menu-toggle:checked ~ ul.menu {
+    display: flex;
+  }
+
+  /* Mostrar hamburguesa */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Redes sociales flotantes */
+  .redes {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  /* Ajustar imágenes de métodos de pago en móviles */
+  .metodospago {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .metodospago img {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Ajustar imagen principal */
+  .livetiktok img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Ajustar texto */
+  .informacion {
+    padding: 15px;
+    font-size: 14px;
+  }
+}

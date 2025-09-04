@@ -147,3 +147,90 @@ nav img {
       padding: 8px;
       font-size: 14px;
     }
+    /* Ocultar checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Ícono hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+  margin-left: auto;
+}
+
+/* Estilos móviles */
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  /* Menú móvil oculto por defecto */
+  nav ul.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #d2ffe0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  nav ul.menu li {
+    margin: 15px 0;
+  }
+
+  /* Mostrar menú al activar checkbox */
+  #menu-toggle:checked ~ ul.menu {
+    display: flex;
+  }
+
+  /* Mostrar hamburguesa */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Redes sociales flotantes */
+  .redes {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  /* Galería en pantallas pequeñas */
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galeria video {
+    max-height: 200px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria video {
+    max-height: 180px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}
+

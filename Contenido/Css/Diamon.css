@@ -153,3 +153,92 @@ button {
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
+/* ================================
+   📱 MENÚ HAMBURGUESA RESPONSIVE
+   ================================ */
+
+/* Ocultar el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Icono hamburguesa (☰) */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+  margin-left: auto;
+}
+
+/* -------- Estilos móviles -------- */
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Menú oculto inicialmente */
+  nav ul.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #d2ffe0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+
+    /* 👇 Para que quede encima de TODO */
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  nav ul.menu li {
+    margin: 15px 0;
+  }
+
+  /* Mostrar menú cuando se active el hamburguesa */
+  #menu-toggle:checked ~ ul.menu {
+    display: flex;
+  }
+
+  /* Mostrar el icono hamburguesa */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Redes sociales flotantes */
+  .redes {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10000;
+  }
+
+  /* Tarjetas en columna */
+  .tarjes1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarje1, .tarje2, .tarje3 {
+    max-width: 90%;
+  }
+}
+
+/* -------- Estilos móviles pequeños -------- */
+@media (max-width: 480px) {
+  nav ul.menu li {
+    margin: 10px 0;
+  }
+
+  .tarje1, .tarje2, .tarje3 {
+    max-width: 100%;
+  }
+}
