@@ -93,76 +93,12 @@ nav img {
 .redes a.tiktok:hover {
     background: linear-gradient(135deg, #010101);
 }
-.tarjes1 {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin: 30px auto;
-    padding: 15px;
-}
 
-/* 🎯 Tarjetas */
-.tarje1, .tarje2, .tarje3 {
-    background-color: #e4e4e4;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    max-width: 300px;
-    flex: 1 1 250px;
-}
-
-/* Hover */
-.tarje1:hover, .tarje2:hover, .tarje3:hover {
-    transform: translateY(-10px);
-    background-color: #00bbff;
-}
-
-/* Imágenes dentro de tarjetas */
-.tarje1 img, .tarje2 img, .tarje3 img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-}
-.price {
-  font-weight: bold;
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-  gap: 8px; /* espacio entre el precio y el select */
-  justify-content: center; /* centra ambos */
-}
-
-.price select {
-  padding: 3px;
-  border-radius: 5px;
-  border: 1px solid #000000;
-  background-color: #f9ffd8;
-}
-
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-/* ================================
-   📱 MENÚ HAMBURGUESA RESPONSIVE
-   ================================ */
-
-/* Ocultar el checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* Icono hamburguesa (☰) */
+/* Estilo del ícono hamburguesa */
 .menu-icon {
   display: none;
   font-size: 30px;
@@ -170,17 +106,90 @@ button {
   color: black;
   margin-left: auto;
 }
+/* contenedor base */
+.torneos {
+  display: grid;
+  gap: 80px;
+  margin: 20px auto;
+  padding: 0 12px;
+  justify-items: center; /* centra el contenido dentro de cada celda */
+  align-items: start;
+}
 
-/* -------- Estilos móviles -------- */
+/* ----- estilos cuando hay 3 o más -----
+   (máximo 3 columnas en escritorio; centrado con max-width)
+*/
+.torneos.many {
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  max-width: calc(3 * 300px + 2 * 20px); /* 3 cards de 300px + gaps */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- cuando hay exactamente 2 -----
+   se usan 2 columnas y el grid se centra con max-width */
+.torneos.two {
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  max-width: calc(2 * 300px + 1 * 20px); /* 2 cards de 300px + gap */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- cuando hay 1 solo -----
+   1 columna y ancho máximo pequeño para que quede centrado */
+.torneos.one {
+  grid-template-columns: 1fr;
+  max-width: 400px; /* ajusta si querés el ancho del card */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mensaje "NO HAY TORNEOS" siempre ocupa toda la fila del grid */
+.torneos .no-torneo {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgb(0, 0, 0);
+  margin: 20px 0;
+}
+
+/* Tarjeta */
+.torneo {
+  width: 100%;
+  max-width: 300px; /* controla el tamaño de cada tarjeta */
+  border-radius: 10px;
+  padding: 14px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+/* Imagen dentro de tarjeta */
+.torneo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* ----------------- Responsive (no rompe tu móvil actual) ----------------- */
+/* Si ya tienes reglas de @media para móviles, mantenelas; estas son seguras */
+@media (max-width: 992px){
+  .torneos.many { grid-template-columns: repeat(2, minmax(220px, 1fr)); max-width: calc(2 * 300px + 1 * 20px); }
+  .torneos.two { grid-template-columns: repeat(2, minmax(200px, 1fr)); max-width: calc(2 * 300px + 1 * 20px); }
+  .torneos.one { max-width: 380px; }
+}
+
+@media (max-width: 480px){
+  .torneos.many, .torneos.two, .torneos.one { grid-template-columns: 1fr; max-width: 100%; }
+  .torneo { max-width: 100%; }
+}
 @media (max-width: 768px) {
   nav {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
-  /* Menú oculto inicialmente */
+  /* Menú en móviles */
   nav ul.menu {
     display: none;
     flex-direction: column;
@@ -191,22 +200,18 @@ button {
     width: 100%;
     text-align: center;
     padding: 15px 0;
-
-    /* 👇 Para que quede encima de TODO */
-    z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   }
 
   nav ul.menu li {
     margin: 15px 0;
   }
 
-  /* Mostrar menú cuando se active el hamburguesa */
+  /* Mostrar menú cuando se active el checkbox */
   #menu-toggle:checked ~ ul.menu {
     display: flex;
   }
 
-  /* Mostrar el icono hamburguesa */
+  /* Mostrar hamburguesa */
   .menu-icon {
     display: block;
   }
@@ -218,27 +223,6 @@ button {
     right: 15px;
     flex-direction: column;
     gap: 10px;
-    z-index: 10000;
+    z-index: 1000;
   }
-
-  /* Tarjetas en columna */
-  .tarjes1 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tarje1, .tarje2, .tarje3 {
-    max-width: 90%;
-  }
-}
-
-/* -------- Estilos móviles pequeños -------- */
-@media (max-width: 480px) {
-  nav ul.menu li {
-    margin: 10px 0;
-  }
-
-  .tarje1, .tarje2, .tarje3 {
-    max-width: 100%;
-  }
-}
+ }

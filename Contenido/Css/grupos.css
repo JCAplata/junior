@@ -131,52 +131,45 @@ body {
 }
 
 /* 🎯 Contenedores de tarjetas en grupos */
-.tarjes1, .tarjes2 {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin: 30px auto;
-    padding: 15px;
+/* Contenedor de tarjetas */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 25px;
+  margin: 30px auto;
+  padding: 15px;
+  max-width: 800px; /* opcional, para centrar mejor */
 }
-
-/* 🎯 Tarjetas */
-.tarje1, .tarje2, .tarje3,
-.tarje4, .tarje5, .tarje6,
-.tarje7, .tarje8 {
-    background-color: #e4e4e4;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    max-width: 300px;
-    flex: 1 1 250px;
+.tarjetas2 {
+  justify-content: center;
+  gap: 25px;
+  margin: 30px auto;
+  padding: 15px;
+  max-width: 250px; /* opcional, para centrar mejor */
+}
+/* Estilos generales de tarjeta */
+.tarjeta {
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Hover */
-.tarje1:hover, .tarje2:hover, .tarje3:hover,
-.tarje4:hover, .tarje5:hover, .tarje6:hover,
-.tarje7:hover, .tarje8:hover {
-    transform: translateY(-10px);
-    background-color: #25D366;
+.tarjeta:hover {
+  transform: translateY(-10px);
+  background-color: #25D366;
 }
 
-/* Imágenes dentro de tarjetas */
-.tarje1 img, .tarje2 img, .tarje3 img,
-.tarje4 img, .tarje5 img, .tarje6 img,
-.tarje7 img, .tarje8 img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
+/* Imagen dentro de tarjeta */
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
-/* 🎯 Tarjetas solas (centradas) */
-.tarjes3, .tarjes4 {
-    display: flex;
-    justify-content: center;
-    margin: 30px auto;
-}
 /* ================================
    📱 MENÚ HAMBURGUESA RESPONSIVE
    ================================ */
@@ -245,16 +238,15 @@ body {
     z-index: 10000;
   }
 
-  /* Ajuste de tarjetas */
-  .tarjes1, .tarjes2, .tarjes4 {
-    flex-direction: column;
-    align-items: center;
+  /* ✅ Ajuste de tarjetas con el nuevo sistema */
+  .tarjetas {
+    grid-template-columns: 1fr; /* en móviles, una tarjeta por fila */
+    gap: 20px;
   }
 
-  .tarje1, .tarje2, .tarje3,
-  .tarje4, .tarje5, .tarje6,
-  .tarje7, .tarje8 {
+  .tarjeta {
     max-width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -264,10 +256,9 @@ body {
     margin: 10px 0;
   }
 
-  .tarje1, .tarje2, .tarje3,
-  .tarje4, .tarje5, .tarje6,
-  .tarje7, .tarje8 {
+  .tarjeta {
     max-width: 100%;
   }
 }
+
 

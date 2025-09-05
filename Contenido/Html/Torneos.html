@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos</title>
+    <link rel="stylesheet" href="../Css/Torneos.css">
+    <link rel="icon" href="../Images/hit.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <img src="../Images/hit.jpg" alt="hit">
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <ul class="menu">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../Html/Grupos.html">Grupos de WhatsApp</a></li>
+            <li><a href="../Html/Referencias.html">Referencias</a></li>
+            <li><a href="../Html/Torneos.html">Torneos</a></li>
+            <li><a href="https://www.google.com/maps/place/Villavicencio,+Meta/">Trato Personal</a></li>
+        </ul>
+
+        <div class="redes">
+            <a href="https://wa.me/+573171397278" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/junixr.gxn?igsh=MW80MDNsZHc3cGZzcg==" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@junixr_n999?_t=ZM-8zOqXziEPFF&_r=1" class="tiktok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </nav>
+
+    <div class="torneos">
+        <p class="no-torneo"><strong>❌ NO HAY TORNEOS PROGRAMADOS ❌</strong></p>
+    
+    <div class="torneo">
+        <h2>Torneo por cuenta bonita</h2>
+        <img src="../Images/G2.jpg" alt="Torneo FIFA">
+        <p><strong>Reglas:</strong> Eliminación directa</p>
+        <p><strong>Fecha:</strong> 10 de octubre</p>
+        <p><strong>HORA:</strong> 10 PM hora colombia</p>
+    </div>
+    
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+</div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.torneos').forEach(container => {
+    const torneos = container.querySelectorAll('.torneo');
+    const mensaje = container.querySelector('.no-torneo');
+
+    // limpiar clases previas
+    container.classList.remove('one','two','many','none');
+
+    if (torneos.length === 0) {
+      // no hay torneos -> mostrar mensaje
+      if (mensaje) mensaje.style.display = 'block';
+      container.classList.add('none');
+    } else {
+      // hay torneos -> ocultar mensaje y marcar clase según cantidad
+      if (mensaje) mensaje.style.display = 'none';
+
+      if (torneos.length === 1) container.classList.add('one');
+      else if (torneos.length === 2) container.classList.add('two');
+      else container.classList.add('many');
+    }
+  });
+});
+</script>
+
+</html>
