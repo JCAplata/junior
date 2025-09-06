@@ -4,13 +4,12 @@
 ## 2. entre a la carpeta contenido, luego a la carpeta html, luego al archivo Referencias.html
 baje hasta encontrar <h1>📷 Referencias 🎥</h1> y debajo de ese copie lo que le dejare a continuacion 👇🏻
 ```html
-<div class="galeria">
     <div class="galeria-item">
       <video controls>
         <source src="../Images/Referencias/r1.mp4" type="video/mp4">
         Tu navegador no soporta videos.
       </video>
-</div>
+    </div>
 ```
 
 ## dependiendo de la cantidad de referencias que vaya a subir en ese momento asi mismo sera el numero de veces que copie y pegue eso
