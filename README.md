@@ -22,12 +22,15 @@ baje hasta encontrar <p class="no-torneo"><strong>❌ NO HAY TORNEOS PROGRAMADOS
 
 ```html
 <div class="torneo">
-    <h2>Torneo por cuenta bonita</h2>
-    <img src="../Images/G2.jpg" alt="torneo">
-    <p><strong>Reglas:</strong> Eliminación directa</p>
-    <p><strong>Fecha:</strong> 10 de octubre</p>
-    <p><strong>HORA:</strong> 10 PM hora colombia</p>
-</div>
+        <h2>Torneo en duo  de Free Fire 🧃🔥</h2>
+        <img src="../Images/duo.jpg" alt="torneo">
+        <p><strong>Detalles:</strong>📢 ¡Demuestra tu habilidad en el campo de batalla y conviértete en el campeón con tu duo, solo podran participar y jugar con dispositivo Movil</p>
+        <p><strong>Premios:</strong>🥇 3k 💎 para cada duo <br> 🥈1k 💎 para cada duo <br>🥉10 USD 🇺🇸 o 40.000🇨🇴</p>
+        <p><strong>Inscripcion:</strong>1. Realiza el pago de la inscripción 15 COP x CADA DUO <br> 2. Envíanos tu comprobante junto con tu ID de Free Fire.<br> 3. Estar atento a la transmisión en vivo.</p>
+        <p><strong>Reglas:</strong>🚫 No se permite el uso de hacks, scripts o cualquier programa externo que brinde ventaja. <br> 🚫No se permite la negación de algún clip de la partida, en caso de q no lo tenga, será automáticamente descalificado. <br> 🚫 No se permiten emuladores ni jugar desde PC (solo dispositivos móviles).</p>
+        <p><strong>Fecha:</strong>21/septiembre/2025</p>
+        <p><strong>Hora:</strong>5PM hora colombia</p>
+    </div>
 ```
 
 ## dependiendo de la cantidad de torneos que quiera programar asi mismo sera el numero de veces que copie y pegue eso
@@ -51,4 +54,4 @@ baje hasta encontrar el </div> que este debajo del titulo del ultimo grupo subid
 ```
 
 ## dependiendo de la cantidad de Grupos que quiera agregar asi mismo sera el numero de veces que copie y pegue eso
-ya despues solo es cuestion de editar la informacion (link del grupo, imagen, #del grupo ) el link del nuevo grupo va dentro de las comillas de <a href="https://chat.whatsapp.com/B9AdOUOt9cEJmvLmEUIPqO?mode=ems_copy_c"> para las imagnes reemplace el G4 por el nombre de la imagen que agrego, y por ultimo cambie el numero del grupo que es el titulo por el que corresponda 
+ya despues solo es cuestion de editar la informacion (link del grupo, imagen, #del grupo ) el link del nuevo grupo va dentro de las comillas de <a href="https://chat.whatsapp.com/B9AdOUOt9cEJmvLmEUIPqO?mode=ems_copy_c123231412342142134124123"> para las imagnes reemplace el G4 por el nombre de la imagen que agrego, y por ultimo cambie el numero del grupo que es el titulo por el que corresponda 

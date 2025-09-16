@@ -160,7 +160,31 @@ nav img {
   color: black;
   margin-left: auto;
 }
+button {
+    background: black;
+    border: none;
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+/* quitar el azul del enlace dentro del botón */
+button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* hover bonito */
+button:hover {
+    background: #444;
+}
+
+button:hover a {
+    color: black;
+}
 /* Estilos móviles */
 @media (max-width: 768px) {
   nav {
