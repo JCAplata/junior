@@ -160,6 +160,13 @@ nav img {
   color: black;
   margin-left: auto;
 }
+body > button, body > button + button, body > button + button + button {
+    display: inline-block;
+    text-align: center;
+}
+body {
+    text-align: center; /* centra los botones */
+}
 button {
     background: black;
     border: none;
@@ -169,23 +176,21 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.title h3 {
-  text-align: center;
-}
-/* quitar el azul del enlace dentro del botón */
+
 button a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-/* hover bonito */
 button:hover {
     background: #444;
 }
-
 button:hover a {
     color: black;
+}
+.title1 h3 {
+  text-align: center;
 }
 /* Estilos móviles */
 @media (max-width: 768px) {
